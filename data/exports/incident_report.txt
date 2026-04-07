@@ -1,0 +1,4 @@
+incident_id,created_at,incident_name,source_ip,attack_pattern,severity,affected_users,alert_count,status,resolution_notes
+1,2026-04-06 10:03:02,Brute Force Attack from 45.67.210.11,45.67.210.11,Brute Force,CRITICAL,admin,3,OPEN,Investigation ongoing
+2,2026-04-06 11:20:17,Request Flood from 66.10.10.10,66.10.10.10,Request Flood,HIGH,guest,2,OPEN,Traffic spike detected
+3,2026-04-06 23:41:55,Suspicious Login from 181.9.9.14,181.9.9.14,Suspicious Login,MEDIUM,john,1,OPEN,Odd time login

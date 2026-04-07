@@ -1,0 +1,24 @@
+python -m scripts.run_pipeline
+
+streamlit run dashboard/streamlit_app.py
+
+python -m uvicorn app.main:app --reload
+
+http://127.0.0.1:8000/docs
+
+import sqlite3
+
+conn = sqlite3.connect("cyber_monitor.db")
+cursor = conn.cursor()
+
+cursor.execute("SELECT COUNT(*) FROM logs")
+print("Logs:", cursor.fetchone()[0])
+
+cursor.execute("SELECT COUNT(*) FROM alerts")
+print("Alerts:", cursor.fetchone()[0])
+
+cursor.execute("SELECT COUNT(*) FROM incidents")
+print("Incidents:", cursor.fetchone()[0])
+
+conn.close()
+
